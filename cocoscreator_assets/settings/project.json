@@ -44,6 +44,16 @@
     "StudioComponent",
     "Chipmunk"
   ],
+  "facebook": {
+    "appID": "",
+    "audience": {
+      "enable": false
+    },
+    "enable": false,
+    "live": {
+      "enable": false
+    }
+  },
   "fit-height": true,
   "fit-width": true,
   "group-list": [
@@ -51,6 +61,7 @@
     "player",
     "item"
   ],
+  "last-module-event-record-time": 1551283440839,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,

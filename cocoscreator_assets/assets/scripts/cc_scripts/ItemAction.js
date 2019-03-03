@@ -60,8 +60,8 @@ cc.Class({
         this.camera = cc.find("Camera").getComponent(cc.Camera);
         this.ctx = cc.find("worldDraw").getComponent(cc.Graphics);
 
-        this.draw = new cc.DrawNode();
-        this.node._sgNode.addChild(this.draw);
+        //this.draw = new cc.DrawNode();
+        //this.node._sgNode.addChild(this.draw);
 
         this.canPicked = false;
         this.prePosition = null;

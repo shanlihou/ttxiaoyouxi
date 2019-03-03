@@ -2676,7 +2676,7 @@ KBEngine.datatypes["BLOB"]		= new KBEngine.DATATYPE_BLOB();
 -----------------------------------------------------------------------------------------*/
 KBEngine.KBEngineArgs = function()
 {
-	this.ip = "127.0.0.1";
+	this.ip = "192.168.146.1";
 	this.port = 20013;
 	this.updateHZ = 100;
 	this.serverHeartbeatTick = 15;
@@ -2882,6 +2882,7 @@ KBEngine.KBEngineApp = function(kbengineArgs)
 	this.serverErrs = {};
 		
 	// 登录loginapp的地址
+	console.log('args:', this.args)
 	this.ip = this.args.ip;
 	this.port = this.args.port;
 	this.isWss = this.args.isWss;

@@ -50,8 +50,8 @@
 				<!-- 数据库地址 
 					（Database address)
 				-->
-				<host> localhost </host>										<!-- Type: String -->
-				<port> 0 </port>												<!-- Type: Integer -->
+				<host> 192.168.0.106 </host>										<!-- Type: String -->
+				<port> 3306 </port>												<!-- Type: Integer -->
 
 				<!-- 数据库账号验证 
 					（Database auth)

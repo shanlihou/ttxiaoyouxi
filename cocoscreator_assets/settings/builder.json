@@ -1,4 +1,12 @@
 {
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
   "appKey": "",
   "appSecret": "",
   "encryptJs": true,
@@ -30,13 +38,12 @@
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait"
   },
-  "renderMode": "0",
   "startScene": "659362c0-e251-46be-bfd9-a71f02e7e750",
   "title": "stone_war",
   "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "https://wxdemo.comblockengine.com/stone_res",
-    "appid": "wxfe3c2a610dc6a2e4",
+    "appid": "wxaf696b9fc9ce21b0",
     "isSubdomain": false,
     "orientation": "landscape",
     "subContext": "stone_ranking"

@@ -144,6 +144,7 @@ cc.Class({
         this.rankingView.active = this.isShowRankingView;
         KBEngine.INFO_MSG("show ranking view: " + this.isShowRankingView.toString());
         // 发消息给子域
+        console.log("hello")
         let openDataContext = wx.getOpenDataContext();
         openDataContext.postMessage({
             message: this.isShowRankingView ? 'Show' : 'Hide',

@@ -42,13 +42,13 @@ cc.Class({
     },
 
     onEnable: function () {
-        cc.director.getPhysicsManager().attachDebugDrawToCamera(this.camera);
-        cc.director.getCollisionManager().attachDebugDrawToCamera(this.camera);
+        //cc.director.getPhysicsManager().attachDebugDrawToCamera(this.camera);
+        //cc.director.getCollisionManager().attachDebugDrawToCamera(this.camera);
     },
     
     onDisable: function () {
-        cc.director.getPhysicsManager().detachDebugDrawFromCamera(this.camera);
-        cc.director.getCollisionManager().detachDebugDrawFromCamera(this.camera);
+        //cc.director.getPhysicsManager().detachDebugDrawFromCamera(this.camera);
+        //cc.director.getCollisionManager().detachDebugDrawFromCamera(this.camera);
     },
 
     setTarget: function(target) {

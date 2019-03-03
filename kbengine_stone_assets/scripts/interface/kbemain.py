@@ -11,7 +11,6 @@ from urllib import request, parse
 import tornado.ioloop
 import tornado.httpclient 
 from LoginPoller import LoginPoller
-from TestLogin import TestLogin
 import time
 import math
 import random

@@ -33,6 +33,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function () {
+        cc.log("ckz on load1");
         this.initKbengine();
         this.installEvents();
         this.loadItemPrefab();
@@ -44,6 +45,7 @@ cc.Class({
         cc.director.preloadScene("WorldScene");
 
         if(cc.sys.platform == cc.sys.WECHAT_GAME) {
+            cc.log("we game")
             this.btn_start.node.active = false;
             this.textinput_name.node.active = false;
             this.enableWxShare();
@@ -72,18 +74,80 @@ cc.Class({
      },
 
     wxLoginNative: function(){
+        var that = this;
         wx.login({
             success: (res) => {
+                cc.log("res:");
+                cc.log(res);
                 if(res.code) {
-                    this.code = res.code;
+                    that.code = res.code;
+                    wx.getSetting({
+                        success: function(res){
+                            console.log(res);
+                            if (res.authSetting['scope.userInfo'])
+                            {
+                                wx.getUserInfo({
+                                    success: (res) => {
+                                        cc.log('success', res)
+                                        that.btn_start.node.active = true;
+                                        that.userName = that.code;
+                                        cc.sys.localStorage.setItem("encryptedData", res.encryptedData);
+                                        cc.sys.localStorage.setItem("iv", res.iv);
+                                    },
+                                    fail: (res) =>{
+                                        cc.log('fail:', res);
+                                    },
+                                    complete: (res) => {
+                                        cc.log('complete:', res)
+                                    }
+            
+                                });
+                            }
+                            else
+                            {
+                                let button = wx.createUserInfoButton({
+                                    type: 'text',
+                                    text: '获取用户信息',
+                                    style: {
+                                      left: 10,
+                                      top: 76,
+                                      width: 200,
+                                      height: 40,
+                                      lineHeight: 40,
+                                      backgroundColor: '#ff0000',
+                                      color: '#ffffff',
+                                      textAlign: 'center',
+                                      fontSize: 16,
+                                      borderRadius: 4
+                                    }
+                                  });
+                                button.onTap((res) => {
+                                    cc.log('success', res)
+                                    that.btn_start.node.active = true;
+                                    that.userName = that.code;
+                                    cc.sys.localStorage.setItem("encryptedData", res.encryptedData);
+                                    cc.sys.localStorage.setItem("iv", res.iv);
+                                })
+                            }
+                        }
+                    });
+                    /*
                     wx.getUserInfo({
                         success: (res) => {
+                            cc.log('success', res)
                             this.btn_start.node.active = true;
                             this.userName = this.code;
                             cc.sys.localStorage.setItem("encryptedData", res.encryptedData);
                             cc.sys.localStorage.setItem("iv", res.iv);
+                        },
+                        fail: (res) =>{
+                            cc.log('fail:', res);
+                        },
+                        complete: (res) => {
+                            cc.log('complete:', res)
                         }
-                    });
+
+                    });*/
                 }
             }
         });

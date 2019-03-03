@@ -14,39 +14,44 @@
   "design-resolution-height": 640,
   "design-resolution-width": 1136,
   "excluded-modules": [
-    "CCSpriteDistortion",
     "LabelOutline",
     "ParticleSystem",
     "TiledMap",
     "Spine Skeleton",
+    "DragonBones",
+    "MotionStreak",
     "ProgressBar",
     "Toggle",
     "PageView",
     "PageViewIndicator",
     "Slider",
-    "EditorBox",
     "VideoPlayer",
     "WebView",
+    "Audio",
     "AudioSource",
     "Animation",
-    "MotionStreak",
     "Collider",
     "Action",
-    "Audio",
-    "Graphics",
-    "DragonBones",
     "Physics",
     "StudioComponent",
-    "RenderTexture",
-    "Chipmunk",
-    "Camera",
     "Intersection"
   ],
+  "facebook": {
+    "appID": "",
+    "audience": {
+      "enable": false
+    },
+    "enable": false,
+    "live": {
+      "enable": false
+    }
+  },
   "fit-height": true,
   "fit-width": true,
   "group-list": [
     "default"
   ],
+  "last-module-event-record-time": 1551283517073,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
